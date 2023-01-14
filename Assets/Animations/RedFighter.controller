@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Recon
+  m_Name: RedFighter
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: CanTeleport
@@ -87,7 +87,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ReconTeleport
+  m_Name: RedFighterTeleport
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -100,7 +100,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ce16ad07c03959c4f89ec2e975681836, type: 2}
+  m_Motion: {fileID: 7400000, guid: d5582f3789af0c847a2b5a65d7062124, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

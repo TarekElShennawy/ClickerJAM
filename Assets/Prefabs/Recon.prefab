@@ -127,6 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5890263369849579601}
+  - component: {fileID: 8468118153293677774}
   m_Layer: 0
   m_Name: ShotSlot
   m_TagString: Untagged
@@ -149,3 +150,17 @@ Transform:
   m_Father: {fileID: 3670676881058604146}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8468118153293677774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7901402961191803831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cdb8ee39c11a6b47ae9032fa0809623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shot: {fileID: 69718185520386198, guid: 7718e1588bb93f745879ac8f7c5eb4da, type: 3}
+  shotSlot: {fileID: 5890263369849579601}

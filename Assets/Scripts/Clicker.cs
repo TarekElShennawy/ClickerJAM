@@ -7,35 +7,27 @@ public class Clicker : MonoBehaviour
 {
     public Game game;
 
-    public GameObject shot;
-
-    [SerializeField]
-    private Transform shotSlot;
+    public AudioSource shipAudio;
+    public AudioClip[] laserSfx;
 
     public TextMeshProUGUI scoreText;
     public Canvas scoreCanvas;
 
     public GameObject textSlot;
 
-    public AudioSource shipAudio;
-    public AudioClip[] laserSfx;
-    
-    void OnMouseDown()
+    private void OnMouseDown()
     {
-        Shoot();
-    }
+        foreach (Transform g in transform.GetComponentsInChildren<Transform>())
+        {
+            if(g.name == "ShotSlot")
+            {
+                g.GetComponent<Shooting>().Shoot();
+                PlayShotSfx(laserSfx);
 
-    void Shoot()
-    {
-        Vector3 mousePos = Input.mousePosition;
-        GameObject shotInstance = Instantiate(shot, shotSlot.position,shotSlot.rotation);
-
-        var score = Instantiate(scoreText, textSlot.transform.position, textSlot.transform.rotation);
-        score.transform.parent = scoreCanvas.transform;
-        PlayShotSfx(laserSfx);
-
-        shotInstance.GetComponent<Rigidbody>().AddForce(Vector3.forward * 10000);
-        game.damageDealt += 1;
+                HandleScore();
+                game.damageDealt += 1;
+            }
+        }
     }
 
     void PlayShotSfx(AudioClip[] sfxList)
@@ -45,15 +37,9 @@ public class Clicker : MonoBehaviour
         shipAudio.PlayOneShot(sfxList[randomChooser]);
     }
 
-    void Update()
+    void HandleScore()
     {
-        if(shotSlot == null)
-        {
-            shotSlot = GameObject.Find("ShotSlot").transform;
-        }
-        else
-        {
-            Debug.Log("No Shotslot found!");
-        }
+        var score = Instantiate(scoreText, textSlot.transform.position, textSlot.transform.rotation);
+        score.transform.parent = scoreCanvas.transform;
     }
 }
