@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf702b6061f07e647818967f12f5447e, type: 3}
   m_Name: RedFighter
   m_EditorClassIdentifier: 
-  ShipGfx: {fileID: 0}
+  shipName: Fighter

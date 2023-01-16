@@ -13,12 +13,14 @@ public class Game : MonoBehaviour
 
     public GameObject ShipSlot;
 
-    public enum Ships {Recon, RedFighter}
+    public enum Ships {Recon, Fighter, Trooper, Meteor}
     public Ships currentShip;
 
     //List of Ship Gfx
     public GameObject reconGfx;
-    public GameObject redFighterGfx;
+    public GameObject fighterGfx;
+    public GameObject trooperGfx;
+    public GameObject meteorGfx;
 
     void Awake()
     {
@@ -31,32 +33,44 @@ public class Game : MonoBehaviour
         ChangeShip(Ships.Recon);
     }
 
-    public Ships ChangeShip(Ships ship)
+    public Ships ChangeShip(Ships ship) //TODO: Works but code could be cleaner. Re-factor the two-liner instantiate + parent to it's own method
     {
+       
         
-        //Ship switching logic
-        if(ship == Ships.Recon)
+            
+
+        switch(ship)
         {
-            GameObject reconShip = Instantiate(reconGfx, new Vector3(1.11f, -6.05f, 1f), Quaternion.identity);
+            case Ships.Recon:
+                GameObject reconShip = Instantiate(reconGfx, new Vector3(1.11f, -6.05f, 1f), Quaternion.identity);
+                reconShip.transform.parent = ShipSlot.transform;
 
-            reconShip.transform.parent = ShipSlot.transform;
-        }
-        else if(ship == Ships.RedFighter)
-        {
-            //TODO: Had to hard-code the destruction of previous ships for new, change as necessary
-            Destroy(GameObject.Find("Recon(Clone)"));
+                break;
+            case Ships.Fighter:
+                Destroy(ShipSlot.transform.GetChild(0).gameObject);
 
-            GameObject redFighterShip = Instantiate(redFighterGfx, new Vector3(3.8f,-4.8f,6.17f), Quaternion.identity);
+                GameObject redFighterShip = Instantiate(fighterGfx, new Vector3(3.8f,-4.8f,6.17f), Quaternion.identity);
+                redFighterShip.transform.parent = ShipSlot.transform;
+                break;
 
-            redFighterShip.transform.parent = ShipSlot.transform;
-        }
+            case Ships.Trooper:
+                Destroy(ShipSlot.transform.GetChild(0).gameObject);
+
+                GameObject trooperShip = Instantiate(trooperGfx, new Vector3(3.8f,-4.8f,6.17f), Quaternion.identity);
+                trooperShip.transform.parent = ShipSlot.transform;
+                break;
+            case Ships.Meteor:
+                Destroy(ShipSlot.transform.GetChild(0).gameObject);
+
+                GameObject meteorShip = Instantiate(meteorGfx, new Vector3(3.8f,-4.8f,6.17f), Quaternion.identity);
+                meteorShip.transform.parent = ShipSlot.transform;
+                break;
+        } 
 
         currentShip = ship;
 
         return ship;
     }
-
-    // Update is called once per frame
     
     void Update() 
     {

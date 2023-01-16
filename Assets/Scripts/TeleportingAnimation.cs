@@ -23,9 +23,17 @@ public class TeleportingAnimation : MonoBehaviour
         if(state == GameState.PlayerTeleporting)
         {
             canTeleport = true;
-
-            shipAnimator.SetBool("CanTeleport", true);
+            shipAnimator.SetBool("CanTeleport", canTeleport);
+            Invoke("CallChangeDimension", 2f);
+            
         }
+    }
+
+    private void CallChangeDimension()
+    {
+        canTeleport = false;
+        shipAnimator.SetBool("CanTeleport", canTeleport);
+        GameManager.Instance.UpdateGameState(GameState.DimensionChanging);
     }
 
 }
