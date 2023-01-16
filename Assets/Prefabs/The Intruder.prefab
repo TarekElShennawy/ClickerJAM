@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  startingHealth: 2
+  startingHealth: 1000
   portal: {fileID: 5842027520815897504, guid: 6ff918de61e527842afa969ce60521d9, type: 3}
   healthBarParent: {fileID: 0}
 --- !u!1001 &8409051325250457830

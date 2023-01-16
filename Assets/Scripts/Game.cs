@@ -7,6 +7,7 @@ public class Game : MonoBehaviour
 {
     public float damageDealt;
     public float damagePerSecond;
+    public float totalDamage;
 
     public TextMeshProUGUI damageUI;
     public TextMeshProUGUI dpsUI;
@@ -35,8 +36,6 @@ public class Game : MonoBehaviour
 
     public Ships ChangeShip(Ships ship) //TODO: Works but code could be cleaner. Re-factor the two-liner instantiate + parent to it's own method
     {
-       
-        
             
 
         switch(ship)
@@ -82,6 +81,6 @@ public class Game : MonoBehaviour
 
     private void AddDps()
     {
-        damageDealt+= damagePerSecond;
+        damageDealt += damagePerSecond;
     }
 }

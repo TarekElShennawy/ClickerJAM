@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using System;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +11,11 @@ public class GameManager : MonoBehaviour
     public GameState State;
 
     public static event Action<GameState> OnGameStateChange;
+
+    public GameObject winScreen;
+
+    [SerializeField]
+    private TextMeshProUGUI totalDamageText;
 
     [SerializeField]
     private List<Sprite> planetList;
@@ -26,6 +32,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> enemyList;
 
+    [SerializeField]
+    private Game gameController;
+
     private int dimensionIterator;
 
     void Awake()
@@ -33,6 +42,8 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         dimensionIterator = 0;
+
+        winScreen.SetActive(false);
     }
 
     void Start()
@@ -102,8 +113,9 @@ public class GameManager : MonoBehaviour
     }
 
     private void WinScreen()
-    {
-        Debug.Log("You Win!");
+    {   
+        winScreen.SetActive(true);
+        totalDamageText.text = "Total Damage : " + gameController.totalDamage.ToString();
     }
 }
 

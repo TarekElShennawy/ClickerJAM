@@ -15,7 +15,7 @@ public class Clicker : MonoBehaviour
 
     public GameObject textSlot;
 
-    private void OnMouseDown()
+    private void OnMouseDown()  
     {
         foreach (Transform g in transform.GetComponentsInChildren<Transform>())
         {
@@ -26,6 +26,8 @@ public class Clicker : MonoBehaviour
 
                 HandleScore();
                 game.damageDealt += 1;
+
+                game.totalDamage += 1;
             }
         }
     }

@@ -106,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493964718181146798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.552, y: 3.848, z: -4.479}
+  m_LocalPosition: {x: -2.87, y: 4.64, z: -3.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdb8ee39c11a6b47ae9032fa0809623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 69718185520386198, guid: 7718e1588bb93f745879ac8f7c5eb4da, type: 3}
+  shot: {fileID: 2846372323918656034, guid: 1c07572ffc97879448c085e8725f4b97, type: 3}
   shotSlot: {fileID: 6275806365127162398}
 --- !u!1 &2148145695249393082
 GameObject:
@@ -152,7 +152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2148145695249393082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.552, y: 4.587, z: -4.479}
+  m_LocalPosition: {x: -1.36, y: 4.587, z: -4.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdb8ee39c11a6b47ae9032fa0809623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 69718185520386198, guid: 7718e1588bb93f745879ac8f7c5eb4da, type: 3}
+  shot: {fileID: 2846372323918656034, guid: 1c07572ffc97879448c085e8725f4b97, type: 3}
   shotSlot: {fileID: 717260073451801643}
 --- !u!1 &3996638592695515952
 GameObject:
@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3996638592695515952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.552, y: 4.237, z: -4.479}
+  m_LocalPosition: {x: -1.93, y: 4.47, z: -4.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdb8ee39c11a6b47ae9032fa0809623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 69718185520386198, guid: 7718e1588bb93f745879ac8f7c5eb4da, type: 3}
+  shot: {fileID: 2846372323918656034, guid: 1c07572ffc97879448c085e8725f4b97, type: 3}
   shotSlot: {fileID: 6647865921635793901}
 --- !u!1 &4915239503169118474
 GameObject:
@@ -327,7 +327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7043996463163901710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.554, y: 3.848, z: -4.479}
+  m_LocalPosition: {x: -6.65, y: 4.63, z: -4.479}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdb8ee39c11a6b47ae9032fa0809623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 69718185520386198, guid: 7718e1588bb93f745879ac8f7c5eb4da, type: 3}
+  shot: {fileID: 2846372323918656034, guid: 1c07572ffc97879448c085e8725f4b97, type: 3}
   shotSlot: {fileID: 173888725002794581}
 --- !u!1 &7666202321060651004
 GameObject:
@@ -373,7 +373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7666202321060651004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.554, y: 4.587, z: -4.479}
+  m_LocalPosition: {x: -4.9, y: 4.587, z: -3.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdb8ee39c11a6b47ae9032fa0809623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 69718185520386198, guid: 7718e1588bb93f745879ac8f7c5eb4da, type: 3}
+  shot: {fileID: 2846372323918656034, guid: 1c07572ffc97879448c085e8725f4b97, type: 3}
   shotSlot: {fileID: 8252103971923309993}
 --- !u!1 &7873946297384118540
 GameObject:
@@ -419,7 +419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7873946297384118540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.554, y: 4.237, z: -4.479}
+  m_LocalPosition: {x: -6.18, y: 4.49, z: -4.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -438,5 +438,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdb8ee39c11a6b47ae9032fa0809623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 69718185520386198, guid: 7718e1588bb93f745879ac8f7c5eb4da, type: 3}
+  shot: {fileID: 2846372323918656034, guid: 1c07572ffc97879448c085e8725f4b97, type: 3}
   shotSlot: {fileID: 4163875161730119985}

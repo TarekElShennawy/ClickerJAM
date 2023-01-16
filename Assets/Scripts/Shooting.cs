@@ -13,7 +13,7 @@ public class Shooting : MonoBehaviour
 
     public void Shoot()
     {
-        GameObject shotInstance = Instantiate(shot, shotSlot.position,shotSlot.rotation);
+        GameObject shotInstance = Instantiate(shot, shotSlot.position,shot.transform.rotation);
 
         
         shotInstance.GetComponent<Rigidbody>().AddForce(Vector3.forward * 10000);
