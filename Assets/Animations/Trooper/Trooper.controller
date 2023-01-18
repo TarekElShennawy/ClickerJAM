@@ -120,7 +120,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 94146b259a2545b45b85ff835a929e49, type: 2}
+  m_Motion: {fileID: 7400000, guid: 66bb0476762dfd44bb7f2f5448a1e97f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -158,7 +158,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ReconTeleport
+  m_Name: TrooperTeleport
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -172,7 +172,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ce16ad07c03959c4f89ec2e975681836, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3f3eca0e403e3b846a1165b1f10e19f4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

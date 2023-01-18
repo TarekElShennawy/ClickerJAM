@@ -13,6 +13,12 @@ public class UpgradeButton : MonoBehaviour
 
     public float upgradeCost;
 
+    [SerializeField]
+    private AudioSource audioSrc;
+    
+    [SerializeField]
+    private AudioClip clickSfx;
+
     public void Start()
     {
         button.onClick.AddListener(ApplyDPS);
@@ -20,8 +26,10 @@ public class UpgradeButton : MonoBehaviour
 
     private void ApplyDPS()
     {
+        audioSrc.PlayOneShot(clickSfx);
+
         if(gameInstance.damageDealt >= upgradeCost)
-        {
+        { 
             powerup.Apply(gameInstance);
             gameInstance.damageDealt -= upgradeCost;
         }

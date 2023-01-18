@@ -1,22 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private List<GameObject> enemyList;
+
+    private GameObject currentEnemy;
+
+    //Variables for state management
+    [SerializeField]
+    private Game gameController;
+
     public static GameManager Instance;
 
     public GameState State;
 
     public static event Action<GameState> OnGameStateChange;
 
+    private int dimensionIterator;
+
     public GameObject winScreen;
 
-    [SerializeField]
-    private TextMeshProUGUI totalDamageText;
-
+    [Header("Sprite Lists")]
     [SerializeField]
     private List<Sprite> planetList;
 
@@ -29,13 +39,24 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private SpriteRenderer backgroundSprite;
 
-    [SerializeField]
-    private List<GameObject> enemyList;
+    [Header("Audio variables")]
+    public List<AudioClip> bgmList;
+
+    public AudioSource audioSrc;
+
+    public AudioClip teleportSfx;
+
+    [Header("UI + Effects")]
 
     [SerializeField]
-    private Game gameController;
+    private TextMeshProUGUI totalDamageText;
 
-    private int dimensionIterator;
+    public GameObject lightSpeed;
+
+    //Dimension achievement icons
+    public List<Image> dimensionAchievementIcons;
+
+    
 
     void Awake()
     {
@@ -43,15 +64,16 @@ public class GameManager : MonoBehaviour
 
         dimensionIterator = 0;
 
+        lightSpeed.SetActive(false);
         winScreen.SetActive(false);
     }
 
     void Start()
     {
         UpdateGameState(GameState.NewBoss);
+        UnlockAchievement(dimensionAchievementIcons[dimensionIterator]);
+
     }
-    
-    //Possibly start with the boss spawning THEN playerShooting phase! (Ensure first boss isn't already in the scene and spawning through GameStates using Enums)
     
     public void UpdateGameState(GameState newState)
     {
@@ -60,12 +82,16 @@ public class GameManager : MonoBehaviour
         switch(newState) {
             case GameState.NewBoss:
                 SpawnBoss();
+                PlayBGM();
                 break;
             case GameState.PlayerShooting:
                 break;
             case GameState.PlayerTeleporting:
+                lightSpeed.SetActive(true);
+                audioSrc.PlayOneShot(teleportSfx);
                 break;
             case GameState.DimensionChanging:
+                lightSpeed.SetActive(false);
                 ChangeDimension();
                 break;
             case GameState.WinState:
@@ -78,22 +104,31 @@ public class GameManager : MonoBehaviour
         OnGameStateChange?.Invoke(newState);
     }
 
+
+    private void PlayBGM()
+    {
+        audioSrc.clip = bgmList[dimensionIterator];
+        audioSrc.Play();
+    }
+
     private void ChangeDimension()
     {
         //Logic for switching background + planets
-
         if(dimensionIterator < planetList.Count)
         {
             planetSprite.sprite = planetList[dimensionIterator];
             backgroundSprite.sprite = backgroundList[dimensionIterator];
             
             dimensionIterator++;
+            
+            UnlockAchievement(dimensionAchievementIcons[dimensionIterator]);
             GameManager.Instance.UpdateGameState(GameState.NewBoss);
         }
-        else
+        else if(dimensionIterator > planetList.Count)
         {
             GameManager.Instance.UpdateGameState(GameState.WinState);
-        } 
+        }
+
     }
 
     private void SpawnBoss()
@@ -103,9 +138,9 @@ public class GameManager : MonoBehaviour
         {
             GameObject enemy = enemyList[dimensionIterator];
 
-            GameObject newEnemy = Instantiate(enemy, enemy.transform.position, enemy.transform.rotation);
+            currentEnemy = Instantiate(enemy, enemy.transform.position, enemy.transform.rotation);
 
-            newEnemy.name = enemy.name;
+            currentEnemy.name = enemy.name;
 
             GameManager.Instance.UpdateGameState(GameState.PlayerShooting);
         }
@@ -116,6 +151,13 @@ public class GameManager : MonoBehaviour
     {   
         winScreen.SetActive(true);
         totalDamageText.text = "Total Damage : " + gameController.totalDamage.ToString();
+    }
+
+    void UnlockAchievement(Image icon)
+    {
+        var unlockedAchievement = icon.color;
+        unlockedAchievement.a = 1f;
+        icon.color = unlockedAchievement;
     }
 }
 

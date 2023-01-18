@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TeleportingAnimation : MonoBehaviour
 {
-    private bool canTeleport = false;
     private Animator shipAnimator;
     
     
@@ -22,18 +21,18 @@ public class TeleportingAnimation : MonoBehaviour
     {
         if(state == GameState.PlayerTeleporting)
         {
-            canTeleport = true;
-            shipAnimator.SetBool("CanTeleport", canTeleport);
-            Invoke("CallChangeDimension", 2f);
+            shipAnimator.SetBool("CanTeleport", true);
+            
+            Invoke("CallChangeDimension", 1f);
             
         }
     }
 
     private void CallChangeDimension()
     {
-        canTeleport = false;
-        shipAnimator.SetBool("CanTeleport", canTeleport);
+        shipAnimator.SetBool("CanTeleport", false);
+        
         GameManager.Instance.UpdateGameState(GameState.DimensionChanging);
-    }
+    }   
 
 }

@@ -21,13 +21,17 @@ public class Clicker : MonoBehaviour
         {
             if(g.name == "ShotSlot")
             {
-                g.GetComponent<Shooting>().Shoot();
+                var shootingLogic = g.GetComponent<Shooting>();
+
+                shootingLogic.Shoot();
+                
+                int shotValue = shootingLogic.shot.GetComponent<Shot>().shotValue;
+                HandleScore(shotValue);
+
                 PlayShotSfx(laserSfx);
 
-                HandleScore();
-                game.damageDealt += 1;
-
-                game.totalDamage += 1;
+                
+                
             }
         }
     }
@@ -39,8 +43,13 @@ public class Clicker : MonoBehaviour
         shipAudio.PlayOneShot(sfxList[randomChooser]);
     }
 
-    void HandleScore()
+    void HandleScore(int shotValue)
     {
+        game.damageDealt += shotValue;
+        game.totalDamage += shotValue;
+
+        //UI Pop-up
+        scoreText.text = shotValue.ToString();
         var score = Instantiate(scoreText, textSlot.transform.position, textSlot.transform.rotation);
         score.transform.parent = scoreCanvas.transform;
     }

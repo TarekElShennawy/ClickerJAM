@@ -9,6 +9,12 @@ public class PanelController : MonoBehaviour
 
     private bool panelOpen;
 
+    [SerializeField]
+    private AudioSource audioSrc;
+    
+    [SerializeField]
+    private AudioClip openSfx, closeSfx;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,17 +25,25 @@ public class PanelController : MonoBehaviour
 
     public void ShowPanel()
     {
+
         if(!panelOpen)
         {
             panel.SetActive(true);
 
+            audioSrc.PlayOneShot(openSfx);
             panelOpen = true;
         }
         else
         {
             panel.SetActive(false);
 
+            audioSrc.PlayOneShot(closeSfx);
             panelOpen = false;
         }
+    }
+
+    public void Test()
+    {
+        Debug.Log("Clicking");
     }
 }

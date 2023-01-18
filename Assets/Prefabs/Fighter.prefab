@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdb8ee39c11a6b47ae9032fa0809623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 2846372323918656034, guid: d45bce3b138f42647aa8ae64f110d48b, type: 3}
+  shot: {fileID: 2846372323918656034, guid: ee33964bc089f1442a77aedfdf2df3f7, type: 3}
   shotSlot: {fileID: 717260073451801643}
 --- !u!1 &3760821042195625027
 GameObject:
@@ -181,7 +181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8013294240683068028
 Transform:
   m_ObjectHideFlags: 0
@@ -209,5 +209,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdb8ee39c11a6b47ae9032fa0809623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 2846372323918656034, guid: d45bce3b138f42647aa8ae64f110d48b, type: 3}
+  shot: {fileID: 2846372323918656034, guid: ee33964bc089f1442a77aedfdf2df3f7, type: 3}
   shotSlot: {fileID: 8013294240683068028}

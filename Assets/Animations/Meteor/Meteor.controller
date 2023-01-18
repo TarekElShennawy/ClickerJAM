@@ -120,7 +120,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 94146b259a2545b45b85ff835a929e49, type: 2}
+  m_Motion: {fileID: 7400000, guid: b754e0b457b3e32428f22f0909610b20, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -158,7 +158,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ReconTeleport
+  m_Name: MeteorTeleport
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -172,7 +172,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ce16ad07c03959c4f89ec2e975681836, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4f056ab52a5a1f945ba38c4c6f2d31af, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

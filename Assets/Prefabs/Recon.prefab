@@ -162,5 +162,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdb8ee39c11a6b47ae9032fa0809623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 2846372323918656034, guid: ee33964bc089f1442a77aedfdf2df3f7, type: 3}
+  shot: {fileID: 2846372323918656034, guid: 1a49ed944afedee4aae8880949467c3f, type: 3}
   shotSlot: {fileID: 5890263369849579601}

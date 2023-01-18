@@ -5,12 +5,13 @@ using UnityEngine;
 public class Shot : MonoBehaviour
 {
     public GameObject explosion;
+    public int shotValue = 100;
 
     private void OnCollisionEnter(Collision coll)
     {
         Destroy(this.gameObject);
 
-        Instantiate(explosion, gameObject.transform.position, gameObject.transform.rotation);
+        Instantiate(explosion, gameObject.transform.position, explosion.transform.rotation);
     }
 }
 

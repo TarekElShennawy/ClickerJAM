@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e867a567caa2584aa656e569a750fcd, type: 3}
   m_Name: NormalDPSBuff
   m_EditorClassIdentifier: 
-  amount: 0.5
+  amount: 1
