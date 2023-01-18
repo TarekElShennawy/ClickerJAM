@@ -5360,8 +5360,14 @@ MonoBehaviour:
   fighterGfx: {fileID: 91350344064431924, guid: 06a67fffe2fc783479fd5471044543a9, type: 3}
   trooperGfx: {fileID: 91350344064431924, guid: 973f66619a9ee4a48837902c5d909383, type: 3}
   meteorGfx: {fileID: 91350344064431924, guid: 651f5c3ffed143e40b02fc3adb2f27a0, type: 3}
-  shipAchievementIcons: []
-  damageAchievementText: []
+  shipAchievementIcons:
+  - {fileID: 1531671019}
+  - {fileID: 820275700}
+  - {fileID: 1145640124}
+  damageAchievementText:
+  - {fileID: 1309039327}
+  - {fileID: 1818431184}
+  - {fileID: 700243753}
 --- !u!4 &1701089950
 Transform:
   m_ObjectHideFlags: 0

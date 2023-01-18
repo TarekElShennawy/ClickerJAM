@@ -21,6 +21,8 @@ public abstract class Enemy : MonoBehaviour
 
     public AudioClip explosionSfx;
 
+    public GameObject monsterObj;
+
     void Start()
     {
         currentHealth = startingHealth;
@@ -45,7 +47,8 @@ public abstract class Enemy : MonoBehaviour
     {
         currentHealth -= damageTaken;
         UpdateHealthbar();
-
+        DropMonster();
+        
         if(currentHealth <= 0)
         {
             //Death logic
@@ -60,6 +63,11 @@ public abstract class Enemy : MonoBehaviour
     public void UpdateHealthbar() {
         healthPercentage = (currentHealth)/(startingHealth);
         healthBarImage.fillAmount = healthPercentage;
+    }
+
+    void DropMonster()
+    {
+        Instantiate(monsterObj);
     }
 
     void OnCollisionEnter(Collision coll)

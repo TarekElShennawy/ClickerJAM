@@ -3,7 +3,10 @@ guid: 9be451ffe1409f04ba06edf3b486ce61
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - healthBarParent: {instanceID: 0}
+  - explosionSfx: {instanceID: 0}
+  - monsterObj: {fileID: 3598273625057730624, guid: 9a87e2c4758d2114c9b2fb8e1ea88814, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

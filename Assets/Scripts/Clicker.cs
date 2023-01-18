@@ -49,7 +49,7 @@ public class Clicker : MonoBehaviour
         game.totalDamage += shotValue;
 
         //UI Pop-up
-        scoreText.text = shotValue.ToString();
+        scoreText.text = "+" + shotValue.ToString();
         var score = Instantiate(scoreText, textSlot.transform.position, textSlot.transform.rotation);
         score.transform.parent = scoreCanvas.transform;
     }
