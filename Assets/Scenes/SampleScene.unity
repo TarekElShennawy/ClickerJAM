@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &43423070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2683,7 +2683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &740319159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3897,7 +3897,11 @@ MonoBehaviour:
   backgroundList:
   - {fileID: 21300000, guid: ddcac1fac1f5c8943a30c2ef6b724062, type: 3}
   - {fileID: 21300000, guid: 35313af049b4a2f42a0325330c51d74a, type: 3}
+  moonList:
+  - {fileID: 21300000, guid: fac31d674b8bfd948844190f6b96550f, type: 3}
+  - {fileID: 21300000, guid: 28fe9c8623e68cf4fb884a5493e8204a, type: 3}
   planetSprite: {fileID: 220723304}
+  moonSprite: {fileID: 726774746}
   backgroundSprite: {fileID: 1639888443}
   bgmList:
   - {fileID: 8300000, guid: c5e67e7c3661ee142b107b0014ea37a7, type: 3}
@@ -4525,7 +4529,7 @@ MonoBehaviour:
   button: {fileID: 1549564150}
   gameInstance: {fileID: 1701089949}
   powerup: {fileID: 11400000, guid: e435a74b02e7e2b489a6340666c9752c, type: 2}
-  upgradeCost: 1000
+  upgradeCost: 0
   audioSrc: {fileID: 0}
   clickSfx: {fileID: 0}
 --- !u!114 &1549564150
@@ -5128,7 +5132,7 @@ MonoBehaviour:
   button: {fileID: 1668211307}
   gameInstance: {fileID: 1701089949}
   powerup: {fileID: 11400000, guid: 782d22d773f26ac4f9076a3b30affdd5, type: 2}
-  upgradeCost: 500
+  upgradeCost: 0
   audioSrc: {fileID: 0}
   clickSfx: {fileID: 0}
 --- !u!114 &1668211307
@@ -6518,7 +6522,7 @@ MonoBehaviour:
   button: {fileID: 2068428057}
   gameInstance: {fileID: 1701089949}
   powerup: {fileID: 11400000, guid: 72a7b8a4f26583644ade6156c5d99895, type: 2}
-  upgradeCost: 100
+  upgradeCost: 0
   audioSrc: {fileID: 0}
   clickSfx: {fileID: 0}
 --- !u!114 &2068428057

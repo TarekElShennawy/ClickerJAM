@@ -6,7 +6,7 @@ public class MonsterRotate : MonoBehaviour
 {
     void Awake()
     {
-        Invoke("DestroyMonster", 4f);
+        Invoke("DestroyMonster", 6f);
     }
 
     

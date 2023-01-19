@@ -34,7 +34,13 @@ public class GameManager : MonoBehaviour
     private List<Sprite> backgroundList;
 
     [SerializeField]
+    private List<Sprite> moonList;
+
+    [SerializeField]
     private SpriteRenderer planetSprite;
+
+    [SerializeField]
+    private SpriteRenderer moonSprite;
 
     [SerializeField]
     private SpriteRenderer backgroundSprite;
@@ -118,13 +124,14 @@ public class GameManager : MonoBehaviour
         {
             planetSprite.sprite = planetList[dimensionIterator];
             backgroundSprite.sprite = backgroundList[dimensionIterator];
+            moonSprite.sprite = moonList[dimensionIterator];
             
             dimensionIterator++;
             
             UnlockAchievement(dimensionAchievementIcons[dimensionIterator]);
             GameManager.Instance.UpdateGameState(GameState.NewBoss);
         }
-        else if(dimensionIterator > planetList.Count)
+        else
         {
             GameManager.Instance.UpdateGameState(GameState.WinState);
         }

@@ -23,6 +23,8 @@ public abstract class Enemy : MonoBehaviour
 
     public GameObject monsterObj;
 
+    public List<Sprite> monsterSprites;
+
     void Start()
     {
         currentHealth = startingHealth;
@@ -67,7 +69,16 @@ public abstract class Enemy : MonoBehaviour
 
     void DropMonster()
     {
-        Instantiate(monsterObj);
+        //Getting random direction to shoot monster
+        Vector2 direction = new Vector2((float)Random.Range(-1,1), (float)Random.Range(-5,5));
+
+        //Swapping monster GameObject's sprite for one from the list of sprites to throw out random monsters
+        int monsterPicker = Random.Range(0, monsterSprites.Count - 1);
+        monsterObj.GetComponent<SpriteRenderer>().sprite = monsterSprites[monsterPicker];
+
+        GameObject monsterInstance = Instantiate(monsterObj);
+
+        monsterInstance.GetComponent<Rigidbody>().AddForce(direction * 4000);
     }
 
     void OnCollisionEnter(Collision coll)

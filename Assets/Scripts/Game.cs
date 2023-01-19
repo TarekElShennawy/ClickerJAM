@@ -64,7 +64,7 @@ public class Game : MonoBehaviour
                 Destroy(ShipSlot.transform.GetChild(0).gameObject);
                 UnlockAchievement(shipAchievementIcons[1]);
 
-                GameObject trooperShip = Instantiate(trooperGfx, new Vector3(3.8f,-4.8f,6.17f), Quaternion.identity);
+                GameObject trooperShip = Instantiate(trooperGfx, new Vector3(3.9f,-4.8f,6.17f), Quaternion.identity);
                 trooperShip.transform.parent = ShipSlot.transform;
                 break;
             case Ships.Meteor:

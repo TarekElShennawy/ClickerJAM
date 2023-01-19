@@ -116,6 +116,10 @@ MonoBehaviour:
   healthBarParent: {fileID: 0}
   explosionSfx: {fileID: 8300000, guid: e2e99d79d7fad9a4fb10fd25e4170c04, type: 3}
   monsterObj: {fileID: 3598273625057730624, guid: 9a87e2c4758d2114c9b2fb8e1ea88814, type: 3}
+  monsterSprites:
+  - {fileID: 21300000, guid: 3edf618727674594293ad34f1327fa6c, type: 3}
+  - {fileID: 21300000, guid: 3edf618727674594293ad34f1327fa6c, type: 3}
+  - {fileID: 21300000, guid: 3edf618727674594293ad34f1327fa6c, type: 3}
 --- !u!82 &2557470436441849934
 AudioSource:
   m_ObjectHideFlags: 0
