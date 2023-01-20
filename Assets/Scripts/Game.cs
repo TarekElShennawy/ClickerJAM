@@ -121,5 +121,6 @@ public class Game : MonoBehaviour
     private void AddDps()
     {
         damageDealt += damagePerSecond;
+        totalDamage += damagePerSecond;
     }
 }

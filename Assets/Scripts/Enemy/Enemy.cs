@@ -10,10 +10,9 @@ public abstract class Enemy : MonoBehaviour
     public float currentHealth, startingHealth;
 
     public GameObject healthBarParent;
-
+    
+    [SerializeField]
     private Image healthBarImage;
-
-    private ScreenShake screenShake;
 
     private float healthPercentage;
 
@@ -23,6 +22,8 @@ public abstract class Enemy : MonoBehaviour
 
     public GameObject monsterObj;
 
+    public GameObject bossObj;
+
     public List<Sprite> monsterSprites;
 
     void Start()
@@ -31,11 +32,9 @@ public abstract class Enemy : MonoBehaviour
         
         healthBarParent = GameObject.FindGameObjectWithTag("Healthbar");
 
-        screenShake = GameObject.Find("Main Camera").GetComponent<ScreenShake>();
-
         audioSrc = GameObject.Find("Game").GetComponent<AudioSource>();
  
-        healthBarImage = healthBarParent.transform.GetChild(1).GetChild(0).GetComponent<Image>(); //TODO: Figure out that line, I hate it so much
+        healthBarImage = GameObject.FindGameObjectWithTag("HealthbarInner").GetComponent<Image>(); //Such an expensive method but not fatal as it's a small game + time constraints
 
         var healthBarName = healthBarParent.GetComponentInChildren<TextMeshProUGUI>();
 
@@ -55,6 +54,10 @@ public abstract class Enemy : MonoBehaviour
         {
             //Death logic
             audioSrc.PlayOneShot(explosionSfx);
+
+            GameObject bossInstance = Instantiate(bossObj);
+
+            bossInstance.GetComponent<Rigidbody>().AddForce(Vector3.up * 4000);
             
             Destroy(this.gameObject);
             
@@ -74,10 +77,10 @@ public abstract class Enemy : MonoBehaviour
 
         //Swapping monster GameObject's sprite for one from the list of sprites to throw out random monsters
         int monsterPicker = Random.Range(0, monsterSprites.Count - 1);
-        monsterObj.GetComponent<SpriteRenderer>().sprite = monsterSprites[monsterPicker];
 
         GameObject monsterInstance = Instantiate(monsterObj);
 
+        monsterInstance.GetComponent<SpriteRenderer>().sprite = monsterSprites[monsterPicker];
         monsterInstance.GetComponent<Rigidbody>().AddForce(direction * 4000);
     }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4732199908432186039}
   - component: {fileID: 8719376139992932025}
   m_Layer: 5
-  m_Name: ScoreText
+  m_Name: AchievementText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +100
+  m_text: Achievement Unlocked!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 043a9333d045c584cac5cd09f1c3ebc0, type: 2}
   m_sharedMaterial: {fileID: 6463735364750828114, guid: 043a9333d045c584cac5cd09f1c3ebc0, type: 2}
